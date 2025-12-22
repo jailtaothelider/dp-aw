@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+}
+
+.btn {
+  padding: 1rem;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.contraste-ruim {
+  background-color: #ffffff;
+  color: #cccccc;
+}
+
+.contraste-bom {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+:focus {
+  outline: 4px solid #ff0000;
+  outline-offset: 4px;
+}

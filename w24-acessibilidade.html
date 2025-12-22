@@ -2,38 +2,81 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>W24 - Acessibilidade WCAG</title>
+  <title>Acessibilidade – Contraste, Foco e ARIA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="w24-acessibilidade.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.5;
+    }
+
+    h1, h2 {
+      margin-top: 32px;
+    }
+
+    .card {
+      padding: 16px;
+      margin: 12px 0;
+      border-radius: 6px;
+    }
+
+    .contraste-ruim {
+      background-color: #ffffff;
+      color: #cccccc;
+      border: 1px solid #ddd;
+    }
+
+    .contraste-bom {
+      background-color: #ffffff;
+      color: #222222;
+      border: 2px solid #222;
+    }
+
+    button, input {
+      padding: 10px;
+      margin-top: 8px;
+      font-size: 1rem;
+    }
+
+    button:focus,
+    input:focus {
+      outline: 4px solid #ff9800;
+      outline-offset: 2px;
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .error {
+      margin-top: 16px;
+      padding: 12px;
+      background-color: #ffe6e6;
+      color: #b00020;
+      font-weight: bold;
+      border-left: 5px solid #b00020;
+    }
+
+    form div {
+      margin-bottom: 12px;
+    }
+  </style>
 </head>
+
 <body>
 
-  <h1>Acessibilidade: Contraste e Foco</h1>
+  <h1>Demonstração de Acessibilidade</h1>
 
-  <section>
-    <h2>Exemplo com CONTRASTE RUIM</h2>
-    <button class="btn contraste-ruim">
-      Botão com contraste insuficiente
-    </button>
-  </section>
+  <h2>1. Contraste de Cores (WCAG)</h2>
 
-  <section>
-    <h2>Exemplo com CONTRASTE CORRIGIDO (WCAG AA)</h2>
-    <button class="btn contraste-bom">
-      Botão com contraste adequado
-    </button>
-  </section>
+  <div class="card contraste-ruim">
+    Este texto possui contraste insuficiente (cinza claro em fundo branco).
+  </div>
 
-  <section>
-    <h2>Teste de FOCO DE TECLADO</h2>
-    <a href="#">Link focável</a><br><br>
-    <input type="text" placeholder="Campo de texto">
-  </section>
-
-  <p>
-    Use a tecla <strong>Tab</strong> para navegar pelos elementos e ver o foco.
-  </p>
-
-</body>
-</html>
+  <div class="card contraste-bom">
+    Este texto possui
